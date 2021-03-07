@@ -29,9 +29,9 @@ ventana.geometry("750x450")
 ventana.resizable(0,0)
 
 # Puedo modificar el ancho de la ventana
-ventana.resizable(0,1)
+# ventana.resizable(0,1)
 
 # Puedo modificar el alto de la ventana
-ventana.resizable(1,0)
+# ventana.resizable(1,0)
 # Activar y mostrar la ventana hasta que se cierre - Este método debe activarse al final
 ventana.mainloop()
