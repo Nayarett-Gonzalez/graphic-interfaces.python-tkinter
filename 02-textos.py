@@ -23,9 +23,24 @@ texto.config(
             padx = 10,
             pady = 20,
             cursor ="spider")
-texto.pack(anchor=SW)
+texto.pack(anchor=SE)
 
-texto = Label(ventana,text="Soy Pilar")
+def pruebas(nombre,apellidos, pais):
+    return f"Hola {nombre} {apellidos}, noto que eres de  {pais}"
+
+
+texto = Label(ventana,text=pruebas(nombre="Pilar",apellidos="González",pais="Chile")) #Puedo cambiar el orden de los parámetros en el método pruebas
+texto.config(
+            height=3,
+            bg="green",
+            font = ("Arial,18"),
+            padx = 10,
+            pady = 20,
+            cursor ="spider")
+texto.pack(anchor=NW)
+
+
+texto = Label(ventana,text="Con Pilar")
 texto.config(
             height=400,
             bg="orange",
@@ -33,6 +48,6 @@ texto.config(
             padx = 10,
             pady = 20,
             cursor ="spider")
-texto.pack(anchor=SE)
+texto.pack(anchor=NW)
 
 ventana.mainloop()
