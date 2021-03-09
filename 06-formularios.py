@@ -37,5 +37,19 @@ campo_texto.grid(row=2,column=1,sticky=W,padx=5,pady=5)
 # Justificado derecha; el texto ingresado aparece desde la derecha, state: disabled (ex)
 campo_texto.config(justify="right",state="normal")
 
+# Label para el campo (descripción)
+label = Label(ventana, text="Descripción")
+label.grid(row=3,column=0,sticky=W,padx=5, pady=5)
+
+# Campo de texto GRANDE (descripción)
+campo_grande = Text(ventana)
+campo_grande.grid(row=3, column=1,sticky=N,padx=5, pady=5)
+campo_grande.config(
+    width=30,
+    height=5,
+    font=("Arial",12),
+    padx=15,
+    pady=15
+)
 
 ventana.mainloop()
