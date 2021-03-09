@@ -14,7 +14,17 @@ encabezado.config(
     padx=10,
     pady=10
 )
+# Grid de 12 columnas(en el columnspan inicial)
+encabezado.grid(row=0,column=0,columnspan=12,sticky=W)
 
-encabezado.pack(side=LEFT, anchor=NW)
+# Label para el campo
+label = Label(ventana, text="Nombre")
+label.grid(row=1,column=0,sticky=W,padx=5, pady=5)
+
+# Campo de texto
+campo_texto = Entry(ventana)
+
+# sticky fija el campo de texto a la izquierda
+campo_texto.grid(row=1,column=1,sticky=W,padx=5,pady=5)
 
 ventana.mainloop()
