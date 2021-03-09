@@ -26,7 +26,19 @@ marco.pack(side=LEFT) # Necesario para que se vea el marco
 marco.pack_propagate(False)
 
 # Para incluir texto
-Label(marco,text="Primer Marco").pack()
+texto = Label(marco,text="Primer Marco")
+texto.config(
+    bg = "red",
+    fg = "white",
+    # padx=15,
+    # pady=15,
+    font = ("Arial",10),
+    height=10,
+    width=10,
+    # bd=1,
+    # relief=SOLID,
+)
+texto.pack(anchor=CENTER,fill=Y, expand=YES)
 
 
 # Marco 2 superior
