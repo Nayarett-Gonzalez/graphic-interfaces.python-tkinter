@@ -17,14 +17,25 @@ encabezado.config(
 # Grid de 12 columnas(en el columnspan inicial)
 encabezado.grid(row=0,column=0,columnspan=12,sticky=W)
 
-# Label para el campo
+# Label para el campo (nombre)
 label = Label(ventana, text="Nombre")
 label.grid(row=1,column=0,sticky=W,padx=5, pady=5)
 
-# Campo de texto
+# Campo de texto (nombre)
 campo_texto = Entry(ventana)
-
 # sticky fija el campo de texto a la izquierda
 campo_texto.grid(row=1,column=1,sticky=W,padx=5,pady=5)
+campo_texto.config(justify="right",state="normal")
+
+# Label para el campo (apellidos)
+label = Label(ventana, text="Apellidos")
+label.grid(row=2,column=0,sticky=W,padx=5, pady=5)
+# Campo de texto (apellidos)
+campo_texto = Entry(ventana)
+# sticky fija el campo de texto a la izquierda
+campo_texto.grid(row=2,column=1,sticky=W,padx=5,pady=5)
+# Justificado derecha; el texto ingresado aparece desde la derecha, state: disabled (ex)
+campo_texto.config(justify="right",state="normal")
+
 
 ventana.mainloop()
