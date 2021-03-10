@@ -10,6 +10,7 @@ from tkinter import messagebox as MessageBox
 
 ventana = Tk()
 ventana.title("Calculadora básica usando Tkinter")
+ventana.geometry("400x400")
 ventana.config(
     bd = 25
 )
@@ -18,16 +19,29 @@ numero1 = StringVar()
 numero2 = StringVar()
 resultado = StringVar()
 
-Label(ventana,text="Primer Número: ").pack()
-Entry(ventana, textvariable=numero1)
 
-Label(ventana,text="Segundo Número: ").pack()
-Entry(ventana, textvariable=numero2)
-Label(ventana, text="")
-Button(ventana,text="Sumar").pack(side="left")
-Button(ventana,text="Restar").pack(side="left")
-Button(ventana,text="Multiplicar").pack(side="left")
-Button(ventana,text="Dividir").pack(side="left")
+marco = Frame(ventana,width=250,height=250)
+marco.config(
+    bd=5,
+    relief=SOLID,
+    padx=15,
+    pady=15
+)
+marco.pack(side=TOP,anchor=CENTER)
+marco.pack_propagate(False)
+
+Label(marco,text="Primer Número: ").pack()
+Entry(marco, textvariable=numero1,justify="center").pack()
+
+Label(marco,text="Segundo Número: ").pack()
+Entry(marco, textvariable=numero2,justify="center").pack()
+Label(marco, text="")
+
+Button(marco,text="Sumar").pack(side="left",fill=X, expand=YES)
+Button(marco,text="Restar").pack(side="left",fill=X, expand=YES)
+Button(marco,text="Multiplicar").pack(side="left",fill=X, expand=YES)
+Button(marco,text="Dividir").pack(side="left",fill=X, expand=YES)
+
 
 
 ventana.mainloop()
