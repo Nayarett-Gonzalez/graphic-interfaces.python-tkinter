@@ -10,15 +10,16 @@ def sacarAlerta():
     # MessageBox.showinfo("Alerta", "Hola soy Pilar")
     #  MessageBox.showwarning("Alerta", "Hola soy Pilar")
     MessageBox.showerror("Alerta", "ERROR")
-
+def salir(nombre):
+    resultado = MessageBox.askquestion("Salir", "¿Quieres seguir ejecutando la aplicación")
+    if resultado != "yes":
+        MessageBox.showinfo("Chaoooo", f"Adios {nombre}")
+        ventana.destroy()
 # La función cuando se llama con command no lleva paréntesis
 Button(ventana, text="Mostrar alerta", command=sacarAlerta).pack()
 
-def salir():
-    resultado = MessageBox.askquestion("Salir", "¿Quieres seguir ejecutando la aplicación")
-    if resultado != "yes":
-        ventana.destroy()
+
 # La función cuando se llama con command no lleva paréntesis
-Button(ventana, text="Salir", command=salir).pack()
+Button(ventana, text="Salir", command=lambda:salir("Pilar")).pack()
 
 ventana.mainloop()
