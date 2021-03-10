@@ -59,5 +59,15 @@ marcado.grid(row=8)
 
 
 # Option Menu
+def seleccionar():
+    seleccionado.config(text=opcion.get())
+opcion= StringVar()
+opcion.set("Opción 1")
 
+Label(ventana,text="Selecciona una opción").grid(row=5,column=1)
+select= OptionMenu(ventana,opcion,"Opción 1", "Opción 2", "Opción 3")
+select.grid(row=6,column=1)
+Button(ventana, text="Ver",command=seleccionar).grid(row=6,column=2)
+seleccionado =Label(ventana)
+seleccionado.grid(row=7,column=1)
 ventana.mainloop()
