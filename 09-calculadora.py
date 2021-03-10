@@ -18,32 +18,37 @@ ventana.config(
 numero1 = StringVar()
 numero2 = StringVar()
 resultado = StringVar()
+
+def cFloat(numero):
+    try:
+        result = float(numero)
+    except:
+        result = 0
+        MessageBox.showerror("Error", "introduce bien los datos")
+    return result
+
 def sumar():
-    resultado.set(float(numero1.get())+float(numero2.get()))
-    mostrarResultado()
+        resultado.set(cFloat(numero1.get())+cFloat(numero2.get()))
+        mostrarResultado()
 
 def restar():
-    resultado.set(float(numero1.get())-float(numero2.get()))
-    mostrarResultado()
+        resultado.set(cFloat(numero1.get())-cFloat(numero2.get()))
+        mostrarResultado()
 
 def multiplicar():
-    resultado.set(float(numero1.get())*float(numero2.get()))
-    mostrarResultado()
+        resultado.set(cFloat(numero1.get())*cFloat(numero2.get()))
+        mostrarResultado()
 
 def dividir():
-    resultado.set(float(numero1.get())/float(numero2.get()))
-    mostrarResultado()
+        resultado.set(cFloat(numero1.get())/cFloat(numero2.get()))
+        mostrarResultado()
+
 
 def mostrarResultado():
     MessageBox.showinfo("Resultado", f"El resultado de la operación es {resultado.get()}")
     # Borramos los números ingresados despues de realizar alguna de las operaciones
     numero1.set("")
     numero2.set("")
-
-
-
-
-
 
 marco = Frame(ventana,width=250,height=250)
 marco.config(
