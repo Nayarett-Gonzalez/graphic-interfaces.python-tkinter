@@ -70,4 +70,5 @@ select.grid(row=6,column=1)
 Button(ventana, text="Ver",command=seleccionar).grid(row=6,column=2)
 seleccionado =Label(ventana)
 seleccionado.grid(row=7,column=1)
+
 ventana.mainloop()
